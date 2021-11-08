@@ -1,0 +1,58 @@
+# Matlab Repository
+
+Read features from GICA output and perform classification- cross validation and testing
+
+Usage:
+    $ matlab -batch "main --dataset <dataset> --labels <labels> --dataset_test <test dataset> --labels_test <test labels> --modality <modality> --folds <folds> --percent <percent voxels> --outpath <output directory>
+    $ matlab -batch "main -d <dataset> -l '<labels>' -dt <test dataset> -lt <test labels> -m <modality> -f <folds> -p <percent voxels> -o <output directory>
+    >> main( 'dataset', '<dataset>', 'labels', '<labels>', 'dataset_test', '<test dataset>', 'labels_test', '<test labels>', 'modality', '<modality>', 'folds', <folds>, 'percent', <percent voxels>, '-o', '<output directory>' )
+    >> main( '-d', '<dataset>', '-l', '<labels>', '-dt', '<test dataset>', '-lt', '<test labels>', '-m', '<modality>', '-f', <folds>, '-p', <percent voxels>, '-o', '<output directory>' )
+
+Arguments:
+{'-d', '--dataset', 'dataset'}
+    Path to GIFT output directory of the dataset used for training and cross-validation, string
+{'-l', '--labels', 'labels'}
+    Path to labels file corresponding to the GIFT subject list, string
+{'-dt', '--dataset_test', 'dataset_test'}
+    Path to GIFT output directory of the test dataset, string, optional
+{'-lt', '--labels_test', 'labels_test'}
+    Path to labels file corresponding to the test subject list, string, optional
+    todo need to make sure train/test are in the same space. currently this is used as a hack
+{'-m', '--modality', 'modality'}
+    modality
+    possible values: sm, fnc, multi
+{'-cm', '--concat_mode', 'concat_mode'}
+    feature concatenation mode in multimodal training. for `-m multi` only. not implemented.
+    possible values:
+        eig (default): compute distances from different modalities, then concat the eigenvalues
+        feat: concat the feaures from different modalities, then compute the distance
+{'-f', '--folds', 'folds'}
+    number of folds in K-fold cross-validation, numeric. e.g.: 10
+{'-p', '--percent', 'percent'}
+    threshold top % of voxels, numeric. e.g.: 0.01
+{'-o', '--outpath', 'outpath'}
+    output directory
+
+Environment variables:
+OSUCH_DEBUG
+    Run analysis with 5 ICs only
+EMBARC_SITES
+    comma separated list of sites in the EMBARC dataset
+SUBSET_CLASSES
+    comma separated list of classes to run classification on
+
+Examples:
+    TRAIN_DAT='../results/zfu_136_nm_ref/'
+    TRAIN_LABEL='../results/zfu_136_nm_ref.csv'
+    TEST_DAT='/data/collaboration/NeuroMark2/Results/ICA/LA5c/'
+    TEST_LABEL='../results/la5c_ica_subjects.csv'
+    matlab -batch "main -d $TRAIN_DAT -l $TRAIN_LABEL -dt $TEST_DAT -lt $TEST_LABEL -m sm -f 10 -p 0.01 -o ./"
+    $ matlab -batch "main --dataset $TRAIN_DAT --labels $TRAIN_LABEL --dataset_test $TEST_DAT --labels_test $TEST_LABEL --modality sm --folds 10 --percent 0.01 --outpath ./"
+    $ matlab -batch "main -d $TRAIN_DAT -l $TRAIN_LABEL -dt $TEST_DAT -lt $TEST_LABEL -m sm -f 10 -p 0.01 -o ./"
+
+    train_dat = '../results/zfu_136_nm_ref/'
+    train_label = '../results/zfu_136_nm_ref.csv'
+    test_dat = '/data/collaboration/NeuroMark2/Results/ICA/LA5c/'
+    test_label = '../results/la5c_ica_subjects.csv'
+    >> main( 'dataset', train_dat, 'labels', train_label, 'dataset_test', test_dat, 'labels_test', test_label, 'modality', 'sm', 'folds', 10, 'percent', 0.01, 'outpath', './' )
+    >> main( '-d', train_dat, '-l', train_label, '-dt', test_dat, '-lt', test_label, '-m', 'sm', '-f', 10, '-p', 0.01, '-o', './' )

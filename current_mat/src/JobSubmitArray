@@ -1,0 +1,48 @@
+#!/bin/bash
+#SBATCH -N 1 
+#SBATCH -n 1
+#SBATCH -c 6
+#SBATCH --mem=60g
+#SBATCH -p qTRD,qTRDHM,qTRDGPU
+#SBATCH -t 1440
+#SBATCH -J choicolate
+#SBATCH -e ../results/log/error%A.err
+#SBATCH -o ../results/log/out%A.out
+#SBATCH -A PSYC0002
+#SBATCH -x trendscn006.rs.gsu.edu
+#SBATCH --oversubscribe 
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=msalman@gsu.edu
+
+sleep 10s
+
+export OMP_NUM_THREADS=1
+export MODULEPATH=/apps/Compilers/modules-3.2.10/Debug-Build/Modules/3.2.10/modulefiles/ 
+echo $HOSTNAME >&2
+
+module load Framework/Matlab2019b
+
+# OSUCH
+TRAIN_DAT='/data/users1/salman/projects/treatment_response/current_mat/results/zfu_136_nm_ref/'
+TRAIN_LABEL_PATH='/data/users1/salman/projects/treatment_response/current_mat/results/zfu_136_nm_ref.csv'
+TRAIN_LABELS='2,1'
+
+# # EMBARC
+# TEST_DAT='/data/collaboration/NeuroMark2/Results/ICA/EMBARC/'
+# TEST_LABEL_PATH='/data/users1/salman/projects/treatment_response/current_mat/results/embarc_ica_subjects.csv'
+# TEST_LABELS='Healthy Control,MDD'
+
+# LA5C
+TEST_DAT='/data/collaboration/NeuroMark2/Results/ICA/LA5c/'
+TEST_LABEL_PATH='/data/users1/salman/projects/treatment_response/current_mat/results/la5c_ica_subjects.csv'
+TEST_LABELS='CONTROL,BIPOLAR'
+
+unset OSUCH_DEBUG
+matlab -batch "main -d $TRAIN_DAT -l $TRAIN_LABEL_PATH -s '$TRAIN_LABELS' -dt $TEST_DAT -lt $TEST_LABEL_PATH -st '$TEST_LABELS \
+    ' -m sm -f 10 -p 0.01 -o ../results/trained_models/ad-ms_sm_thresholded/"
+matlab -batch "main -d $TRAIN_DAT -l $TRAIN_LABEL_PATH -s '$TRAIN_LABELS' -dt $TEST_DAT -lt $TEST_LABEL_PATH -st '$TEST_LABELS \
+    ' -m sm -f 10 -o ../results/trained_models/ad-ms_sm/"
+# matlab -batch "main -d $TRAIN_DAT -l $TRAIN_LABEL_PATH -s '$TRAIN_LABELS' -m sm -f 10 -p 1 -o ../results/debug/"
+
+sleep 10s
+

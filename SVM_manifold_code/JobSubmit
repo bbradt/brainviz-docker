@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -N 1 
+#SBATCH -n 1
+#SBATCH -c 20
+#SBATCH --mem=120g
+#SBATCH -p qTRD
+#SBATCH -t 1440
+#SBATCH -J very_important
+#SBATCH -e slurm/main%A.err
+#SBATCH -o slurm/main%A.out
+#SBATCH -A PSYC0002
+#SBATCH --oversubscribe 
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=msalman@gsu.edu
+
+sleep 10s
+
+export OMP_NUM_THREADS=1
+export MODULEPATH=/apps/Compilers/modules-3.2.10/Debug-Build/Modules/3.2.10/modulefiles/ 
+echo $HOSTNAME
+
+module load Framework/Matlab2019a
+matlab -batch main
+
+sleep 10s
+
