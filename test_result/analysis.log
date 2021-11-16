@@ -1,0 +1,90 @@
+Checking the analysis_type parameter 3
+Checking for data and template interpolation.
+Checking mask None
+Running Group ICA with Nipype
+Checking GIFT parameters: {'algoType': 16, 'which_analysis': 1, 'numReductionSteps': 1, 'group_ica_type': 'spatial', 'group_pca_type': 'subject specific', 'backReconType': 1, 'preproc_type': 1, 'dim': 53, 'scaleType': 0, 'refFiles': '/brainforge/backend_env/brainforge/test_data/NeuroMark.nii', 'comp_network_names': {'SC': [1, 2, 3, 4, 5], 'AUD': [6, 7], 'SM': [8, 9, 10, 11, 12, 13, 14, 15, 16], 'VIS': [17, 18, 19, 20, 21, 22, 23, 24, 25], 'CC': [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42], 'DMN': [43, 44, 45, 46, 47, 48, 49], 'CR': [50, 51, 52, 53]}, 'mask': None, 'run_name': 'brainforge-gift_smnsprest_gica', 'perfType': 1, 'TR': 2, 'dummy_scans': 0}
+Done!
+Result DataFile export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006 - gica_cmd_sub01_component_ica_s1_.nii True
+Result DataFile export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006 - gica_cmd_sub01_timecourses_ica_s1_.nii True
+
+Start scanning sensitive information.
+Found: 79 files
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_postprocess_results.mat
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_ica_parameter_info.mat
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_sub01_component_ica_s1_.nii
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmdSubject.mat
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_sub01_component_ica_s1_.mat
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_ica.mat
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmdMask.img
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmdMask.hdr
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_sub01_timecourses_ica_s1_.nii
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_003.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/kurtosis_001.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_050.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_024.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_013.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_045.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_028.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_033.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_007.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_004.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_032.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_026.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_027.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_040.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_011.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_023.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_052.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_006.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_016.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_046.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_031.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_037.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/kurtosis_002.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_015.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_022.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_009.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_047.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_025.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_018.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_030.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/FNC_maps_001.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_014.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_049.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_001.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_017.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_051.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_042.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/FNC_time_001.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_044.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_008.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_034.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_048.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_010.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_021.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_053.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_043.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_019.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_029.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_036.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_002.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_038.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_039.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_041.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_020.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_005.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_012.png
+Binary file found (No Process): export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/mean_comp_035.png
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/pyscript_gicacommand.m
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_params.json
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/singularity.out
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_batch.m
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/singularity.err
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/pypeline.log
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/pypeline.lock
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_results.log
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/kurtosis_info.txt
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/icatb_gica_html_report.html
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/params.txt
+Scanning File : export/research/archive/demo/microsoft/xinyou/test_study/group_analyses/gica/ver0.0/group-ica-default/00000005+0917d006/gica_cmd_gica_results/spectra_summary.txt
+Completed scanning sensitive information.
