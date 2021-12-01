@@ -7,12 +7,12 @@ function X = load_spatial_maps( file_pat, ic_idx, n_voxels, sub_idx )
     X = NaN*ones( n_sub, n_ic, n_voxels );
     % load subject data
     
-    p = gcp('nocreate');
-    if isempty(p)
-        parpool( str2num( getenv('SLURM_CPUS_PER_TASK') ) );
-    end
+    %p = gcp('nocreate');
+    %if isempty(p)
+    %    parpool( str2num( getenv('SLURM_CPUS_PER_TASK') ) );
+    %end
 
-    parfor jj = 1:length( sub_idx )
+    for jj = 1:length( sub_idx )
         t1 = strrep( fullfile( file_pat ), '$1', num2str( sub_idx(jj) ) );
         t1 = load(t1);
         if isfield(t1, 'compSet')

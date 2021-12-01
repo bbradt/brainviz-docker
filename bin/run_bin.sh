@@ -1,0 +1,6 @@
+TRAIN_DATA='/data/users1/salman/projects/treatment_response/current_mat/results/zfu_136_nm_ref/'
+TRAIN_LABELS='/data/users1/salman/projects/treatment_response/current_mat/results/zfu_136_nm_ref.csv'
+TEST_DATA='/data/users2/bbaker/projects/treatment_response_mine/test_result/'
+TEST_LABELS='/data/users2/bbaker/projects/treatment_response_mine/test_result/test_label.csv'
+PRECOMPUTED_MODEL='/data/users1/salman/projects/treatment_response/current_mat/results/trained_models/ad-ms_135/model_precomputed859.mat'
+PRECOMPUTED_KERNEL='/data/users1/salman/projects/treatment_response/current_mat/results/trained_models/ad-ms_135/kernel859.mat'

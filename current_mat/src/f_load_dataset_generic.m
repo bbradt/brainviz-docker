@@ -7,10 +7,12 @@ function params = load_dataset_generic( ica_path, varargin )
     if nargin > 2
         labels = varargin{2};
     end
-    ic_labels_path = '../results/neuromark_ic_labels.csv';
+    ic_labels_path = 'neuromark_ic_labels.csv';
     
     % get number of voxels from param file
-    t1 = strip( ls( [ica_path '*param*'] ) );
+    t1 = strip( ls( [ica_path '*parameter_info*'] ) );
+    disp('T1');
+    disp(t1);
     t1 = load( t1 );
     n_voxels = numel( t1.sesInfo.mask_ind );
 

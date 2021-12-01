@@ -59,8 +59,6 @@
 
 function main_test_only( varargin )
     % add toolboxes to path
-    addpath( '../../SVM_manifold_code/bin/libsvm-3.24/matlab/' )
-    addpath( genpath( '/app/GroupICATv4.0c/icatb/' ) )
 
     % default values
     dset_test = '';
@@ -72,6 +70,9 @@ function main_test_only( varargin )
     % selected labels for subsetting data
     labels_train = [];
     labels_test = [];
+    precomputed_model = 'NONE';
+    precomputed_kernel = 'NONE';
+    train = 0;
     
     disp( 'parse parameters' )
     for jj = 1:2:nargin
@@ -117,6 +118,12 @@ function main_test_only( varargin )
         case {'-o', '--outpath', 'outpath'}
             disp( ['output directory: ' varargin{jj+1}] )
             outpath = varargin{jj+1};
+        case {'-pm', '--precomputed_model', 'precomputed_model'}
+            disp( ['precomputed_model: ' varargin{jj+1}] )
+            precomputed_model = varargin{jj+1};
+        case {'-pk', '--precomputed_kernel', 'precomputed_kernel'}
+            disp( ['precomputed_kernel: ' varargin{jj+1}] )
+            precomputed_kernel = varargin{jj+1};
         end
     end
 
@@ -148,7 +155,7 @@ function main_test_only( varargin )
         test_ = 1;
         % case: surrogate dataset
         if isstring( dset_test ) | ischar( dset_test )
-            params_test      = f_load_dataset_generic( dset_test, labels_path_test, labels_test );
+            params_test      = f_load_dataset_generic_bf( dset_test, labels_path_test, labels_test );
             file_pat_test    = params_test.file_pat; % for loading spatial maps
             ica_path_test    = params_test.ica_path; % for loading FNC from postprocess file
             y_test           = params_test.y;
@@ -183,7 +190,7 @@ function main_test_only( varargin )
         % load training spatial maps
         X = f_load_spatial_maps( file_pat, cell2mat(ic_labels(:,1)), n_voxels, sub_idx );
         if test_
-            X_test = f_load_spatial_maps( file_pat_test, cell2mat(ic_labels(:,1)), n_voxels_test, sub_idx_test );
+            X_test = f_load_spatial_maps_nii( file_pat_test, cell2mat(ic_labels(:,1)), n_voxels_test, sub_idx_test );
         end
         % apply voxel mask based on ttest
         [X, vox_mask] = f_threshold_sm( X, y, perc_ );
@@ -199,7 +206,7 @@ function main_test_only( varargin )
                 X_test = f_threshold_sm( X_test, y_test, vox_test );
             end
             % apply IC mask to test data
-            X_test = X_test( :, ic_mask, : );
+            % X_test = X_test( :, ic_mask, : );
         end
     elseif strcmp( mod_, 'fnc' )
         % load FNC
@@ -217,7 +224,7 @@ function main_test_only( varargin )
 
     if ~strcmp( mod_, 'multi' )
         disp( 'prediction with the best features' )
-        if test_
+        if strcmp(precomputed_model,'NONE')
             [acc_, acc_test, out_] = f_svm_riemann_surrogate( X, y, cv_idx, X_test, y_test );
             if outpath
                 if ~exist( outpath, 'dir' )
@@ -234,16 +241,14 @@ function main_test_only( varargin )
                 end
             end
         else
-            acc_ = f_svm_riemann_surrogate_test_only( X, y, X_test;
+            disp( 'Using precomputed model ');
+            disp(precomputed_model);
+            [predict_label_L, accuracy_L, dec_values_L] = f_svm_riemann_surrogate_test_only( X, y, X_test, precomputed_model, precomputed_kernel);
+            save([outpath '/results.mat'], 'predict_label_L', 'accuracy_L', 'dec_values_L')
+            %[acc_, acc_test, out_] = f_svm_riemann_surrogate( X, y, cv_idx, X_test, y_test );
         end
     else
         disp( 'prediction with multimodal features' )
         acc_ = f_svm_kernel_multi( X_sm, X_fnc, y, cv_idx, concat_mode );
     end
 end
-
-% function for loading non-generic dataset 
-function params = load_dataset_details( dataset_, classes_ )
-    params = eval( ['f_load_dataset_' dataset_ '("' classes_ '")' ] );
-end
-
