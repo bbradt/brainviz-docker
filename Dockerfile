@@ -24,8 +24,9 @@ RUN apt-get update && apt-get install -y \
 #RUN /usr/bin/firefox -headless --setDefaultBrowser &
 RUN mkdir /tmp/mcr_installer && \
     cd /tmp/mcr_installer && \
-    wget http://ssd.mathworks.com/supportfiles/downloads/R2016b/deployment_files/R2016b/installers/glnxa64/MCR_R2016b_glnxa64_installer.zip && \
-    unzip MCR_R2016b_glnxa64_installer.zip && \
+    #wget http://ssd.mathworks.com/supportfiles/downloads/R2016b/deployment_files/R2016b/installers/glnxa64/MCR_R2016b_glnxa64_installer.zip && \
+    wget https://ssd.mathworks.com/supportfiles/downloads/R2019b/Release/9/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2019b_Update_9_glnxa64.zip && \
+    unzip MATLAB_Runtime_R2019b_Update_9_glnxa64.zip && \
     ./install -mode silent -agreeToLicense yes && \
     rm -Rf /tmp/mcr_installer
 
