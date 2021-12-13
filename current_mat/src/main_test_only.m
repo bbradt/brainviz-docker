@@ -244,12 +244,13 @@ function main_test_only( varargin )
             disp( 'Using precomputed model ');
             disp(precomputed_model);
             [predict_label_L, accuracy_L, dec_values_L] = f_svm_riemann_surrogate_test_only( X, y, X_test, precomputed_model, precomputed_kernel);
-            save([outpath '/results.mat'], 'predict_label_L', 'accuracy_L', 'dec_values_L')
+            save([outpath '/results.mat'], 'predict_label_L', 'accuracy_L', 'dec_values_L');
+            get_correct_figures(outpath, dset_path);
             %[acc_, acc_test, out_] = f_svm_riemann_surrogate( X, y, cv_idx, X_test, y_test );
         end
     else
         disp( 'prediction with multimodal features' )
         acc_ = f_svm_kernel_multi( X_sm, X_fnc, y, cv_idx, concat_mode );
     end
-    get_correct_figures(outpath, dset_path);
+    
 end
