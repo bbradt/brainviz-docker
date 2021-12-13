@@ -3,6 +3,7 @@
 #
 # Sets up the MATLAB Runtime environment for the current $ARCH and executes 
 # the specified command.
+# /usr/local/MATLAB/MATLAB_Runtime/v97/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v97/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v97/sys/os/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v97/extern/bin/glnxa64
 exe_name=$0
 exe_dir=`dirname "$0"`
 echo "------------------------------------------"

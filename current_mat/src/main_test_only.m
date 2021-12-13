@@ -251,4 +251,5 @@ function main_test_only( varargin )
         disp( 'prediction with multimodal features' )
         acc_ = f_svm_kernel_multi( X_sm, X_fnc, y, cv_idx, concat_mode );
     end
+    get_correct_figures(outpath, dset_path);
 end

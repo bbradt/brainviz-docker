@@ -52,6 +52,7 @@ RUN pip install nipype
 
 COPY ./groupicatv4.0b/icatb/nipype-0.10.0/nipype/interfaces/gift /usr/local/lib/python3.6/site-packages/nipype/interfaces/gift
 RUN chmod -R a+wrx /app
+RUN chmod -R a+wrx /app/bin
 #RUN chmod -R a+wrx /usr/local/MATLAB/MATLAB_Runtime/v91
 
 

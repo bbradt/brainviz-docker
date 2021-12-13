@@ -1,1 +1,53 @@
-69,SCN,Caudate53,SCN,Thalamus98,SCN,Putamen99,SCN,Caudate45,SCN,Thalamus21,ADN,Superior temporal gyrus56,ADN,Rolandic_Oper3,SMN,postcentral9,SMN,postcentral_L2,SMN,Paracentral lobule11,SMN,postcentral_R27,SMN,Superior parietal lobule54,SMN,Paracentral lobule66,SMN,Precentral80,SMN,Superior parietal lobule72,SMN,Postcentral gyrus16,VSN,CalcarineG5,VSN,MOG62,VSN,Middle temporal gyrus15,VSN,Cuneus12,VSN,Right MOG93,VSN,Fusiform20,VSN,Lingual_Left8,VSN,Lingual77,VSN,Middle temporal gyrus68,CON,inferior parietal lobule33,CON,Insula43,CON,Frontal_Sup_Medial70,CON,IFG61,CON,R MTG+IFG55,CON,Middle frontal gyrus63,CON,inferior parietal lobule79,CON,inferior parietal lobule84,CON,Superior Motor Area96,CON,Superior Frontal gyrus88,CON,Middle frontal gyrus48,CON,Hippocampus81,CON,left inferior parietal lobule37,CON,Middle cingulum gyrus67,CON,Inferior frontal38,CON,Middle frontal gyrus83,CON,Hippocampus32,DMN,Precuneus40,DMN,Precuneus23,DMN,ACC71,DMN,PCC17,DMN,ACC51,DMN,Precuneus94,DMN,PCC13,CBN,Cerebellum18,CBN,Cerebellum4,CBN,Cerebellum7,CBN,Cerebellum
+69,SCN,Caudate
+53,SCN,Thalamus
+98,SCN,Putamen
+99,SCN,Caudate
+45,SCN,Thalamus
+21,ADN,Superior temporal gyrus
+56,ADN,Rolandic_Oper
+3,SMN,postcentral
+9,SMN,postcentral_L
+2,SMN,Paracentral lobule
+11,SMN,postcentral_R
+27,SMN,Superior parietal lobule
+54,SMN,Paracentral lobule
+66,SMN,Precentral
+80,SMN,Superior parietal lobule
+72,SMN,Postcentral gyrus
+16,VSN,CalcarineG
+5,VSN,MOG
+62,VSN,Middle temporal gyrus
+15,VSN,Cuneus
+12,VSN,Right MOG
+93,VSN,Fusiform
+20,VSN,Lingual_Left
+8,VSN,Lingual
+77,VSN,Middle temporal gyrus
+68,CON,inferior parietal lobule
+33,CON,Insula
+43,CON,Frontal_Sup_Medial
+70,CON,IFG
+61,CON,R MTG+IFG
+55,CON,Middle frontal gyrus
+63,CON,inferior parietal lobule
+79,CON,inferior parietal lobule
+84,CON,Superior Motor Area
+96,CON,Superior Frontal gyrus
+88,CON,Middle frontal gyrus
+48,CON,Hippocampus
+81,CON,left inferior parietal lobule
+37,CON,Middle cingulum gyrus
+67,CON,Inferior frontal
+38,CON,Middle frontal gyrus
+83,CON,Hippocampus
+32,DMN,Precuneus
+40,DMN,Precuneus
+23,DMN,ACC
+71,DMN,PCC
+17,DMN,ACC
+51,DMN,Precuneus
+94,DMN,PCC
+13,CBN,Cerebellum
+18,CBN,Cerebellum
+4,CBN,Cerebellum
+7,CBN,Cerebellum

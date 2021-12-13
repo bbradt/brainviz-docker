@@ -1,0 +1,7 @@
+,cohorts,SCN,ADN,SMN,VSN,CON,DMN,CBN
+0,BP/MDD,Caudate (99),Rolandic_Oper (56),Superior parietal lobule (27),Fusiform (93),R MTG+IFG (61),PCC (71),Cerebellum (13)
+1,BP/nonresponders,Caudate (99),Rolandic_Oper (56),Superior parietal lobule (80),Lingual_Left (20),Middle cingulum gyrus (37),Precuneus (32),Cerebellum (4)
+2,BP/MDD using 1% SM+FNC,Putamen (98),Superior temporal gyrus (21),Paracentral lobule (2),Lingual (8),Hippocampus (83),Precuneus (51),Cerebellum (4)
+3,MDD/NC using 1% SM+FNC,Putamen (98),Superior temporal gyrus (21),postcentral (3),Lingual (8),Superior Motor Area (84),ACC (23),Cerebellum (4)
+4,MDD/nonresponders,Thalamus (45),Rolandic_Oper (56),Paracentral lobule (2),Right MOG (12),inferior parietal lobule (79),PCC (71),Cerebellum (18)
+5,BP/NC using 1% SM+FNC,Thalamus (53),Superior temporal gyrus (21),postcentral (3),Lingual (8),Hippocampus (83),PCC (71),Cerebellum (4)
