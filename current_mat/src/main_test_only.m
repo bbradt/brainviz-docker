@@ -248,7 +248,7 @@ function main_test_only( varargin )
             disp('paths');
             disp(outpath);
             disp(dset_test);
-            get_correct_figures(outpath, dset_test);
+            grab_correct_figures(outpath, dset_test);
             %[acc_, acc_test, out_] = f_svm_riemann_surrogate( X, y, cv_idx, X_test, y_test );
         end
     else
