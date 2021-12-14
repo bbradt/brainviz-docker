@@ -245,7 +245,10 @@ function main_test_only( varargin )
             disp(precomputed_model);
             [predict_label_L, accuracy_L, dec_values_L] = f_svm_riemann_surrogate_test_only( X, y, X_test, precomputed_model, precomputed_kernel);
             save([outpath '/results.mat'], 'predict_label_L', 'accuracy_L', 'dec_values_L');
-            get_correct_figures(outpath, dset_path);
+            disp('paths');
+            disp(outpath);
+            disp(dset_test);
+            get_correct_figures(outpath, dset_test);
             %[acc_, acc_test, out_] = f_svm_riemann_surrogate( X, y, cv_idx, X_test, y_test );
         end
     else
