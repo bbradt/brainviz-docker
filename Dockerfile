@@ -51,11 +51,11 @@ WORKDIR /app
 RUN pip install nipype
 
 COPY ./groupicatv4.0b/icatb/nipype-0.10.0/nipype/interfaces/gift /usr/local/lib/python3.6/site-packages/nipype/interfaces/gift
+COPY . /app
 RUN chmod -R a+wrx /app
 RUN chmod -R a+wrx /app/bin
 #RUN chmod -R a+wrx /usr/local/MATLAB/MATLAB_Runtime/v91
 
 
-COPY . /app
 #RUN (timeout 300 bash /app/groupicatv4.0b/GroupICATv4.0b_standalone/run_groupica.sh /usr/local/MATLAB/MATLAB_Runtime/v91; exit 0)
 
