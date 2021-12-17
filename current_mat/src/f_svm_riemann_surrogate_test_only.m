@@ -76,7 +76,7 @@ function [predict_label_L, accuracy_L, dec_values_L, prob_est_L] = svm_riemann_s
     load(precomputed_model)
     disp('Making predictions')
     [predict_label_L, accuracy_L, dec_values_L] = svmpredict(test_label, ...
-        kernel_, model_precomputed);
+        kernel_, model_precomputed, '-b 1');
     
     
 
